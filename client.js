@@ -1,6 +1,8 @@
 // establishes a connection with the game server
 
 const net = require("net");
+
+
 const connect = function () {
   const conn = net.createConnection({
     host: "localhost",// IP address here,
@@ -15,11 +17,8 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Connection successfully established");
     conn.write("Name: MAS");
+    
   });
-
-  
-
-
 
   //Recieving data from server
   conn.on("data", (data) => {
