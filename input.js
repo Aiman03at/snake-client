@@ -9,8 +9,10 @@
 const { MOVE_UP_KEY,
   MOVE_DOWN_KEY,
   MOVE_LEFT_KEY,
-  MOVE_RIGHT_KEY } = require("./constants");
-let connection;
+  MOVE_RIGHT_KEY } = require("./constant");
+  
+  
+  let connection;
 
 const setupInput = function (conn) {
   connection = conn;
@@ -40,19 +42,19 @@ const handleUserInput = function (key)  {
     process.exit();
   }
   if (key === MOVE_UP_KEY) {
-    console.log("Move : Up")
-    connection.write("Move : up");
+    console.log("Move: Up")
+    connection.write("Move: up");
   }
   if (key === MOVE_LEFT_KEY) {
-    connection.write("Move : left");
+    connection.write("Move: left");
     console.log("Move : left")
   }
   if (key === MOVE_DOWN_KEY) {
-    connection.write("Move : down");
+    connection.write("Move: down");
     console.log("Move : down");
   }
   if (key === MOVE_RIGHT_KEY) {
-    connection.write("Move : right");
+    connection.write("Move: right");
     console.log("Move : right");
   }
   //Sending a message when pressing "m".

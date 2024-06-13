@@ -1,7 +1,7 @@
 // establishes a connection with the game server
 
 const net = require("net");
-const { IP, PORT } = require("./constants");
+const { IP, PORT } = require("./constant");
 
 const connect = function () {
   const conn = net.createConnection({
@@ -19,7 +19,7 @@ const connect = function () {
     conn.write("Name: MAS");
     
   });
-
+ 
   //Recieving data from server
   conn.on("data", (data) => {
     console.log("Server says: ", data);
